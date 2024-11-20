@@ -8,4 +8,16 @@ List<Guess> listGuesses = new List<Guess>();
 
 int guess = 0;
 
+do
+{
+    Console.Write("Guess a number: ");
+    string userInput = Console.ReadLine();
 
+    if (!int.TryParse(userInput, out guess))
+    {
+        Console.WriteLine("Please choose a valid number.");
+        continue;
+    }
+
+}
+while (guess != randomNum);
