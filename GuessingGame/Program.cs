@@ -19,6 +19,13 @@ do
         continue;
     }
 
+    int findIndexInPreviousGuessList = listGuesses.FindIndex(x => x.UserGuessNum == guess);
+    if (findIndexInPreviousGuessList != -1)
+    {
+        Console.WriteLine($"You guessed this number {listGuesses.Count - findIndexInPreviousGuessList} turns ago!");
+    }
+    listGuesses.Add(new Guess(guess));
+
     if (guess > randomNum)
     {
         Console.WriteLine("Your guess is higher");
@@ -27,7 +34,8 @@ do
     {
         Console.WriteLine("Your guess is lower");
     }
-
-
 }
 while (guess != randomNum);
+
+//If matched 
+Console.WriteLine($"You Won! The answer was {randomNum}."); //when numbe is matched
