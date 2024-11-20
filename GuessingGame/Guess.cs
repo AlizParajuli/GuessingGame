@@ -8,8 +8,16 @@ namespace GuessingGame
 {
     public class Guess
     {
-        public int UserGuess { get; }
+        public int UserGuessNum { get; }
         public DateTime GuessTime { get; }
+
+
+        //Constructor
+        public Guess(int UserGuess)
+        {
+            UserGuessNum = UserGuess;
+            GuessTime = DateTime.Now;
+        }
 
     }
 }
