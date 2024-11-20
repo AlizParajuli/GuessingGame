@@ -19,5 +19,15 @@ do
         continue;
     }
 
+    if (guess > randomNum)
+    {
+        Console.WriteLine("Your guess is higher");
+    }
+    else if (guess < randomNum)
+    {
+        Console.WriteLine("Your guess is lower");
+    }
+
+
 }
 while (guess != randomNum);
